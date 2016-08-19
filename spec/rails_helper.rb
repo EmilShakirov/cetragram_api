@@ -7,16 +7,17 @@ require "shoulda/matchers"
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
-  config.use_transactional_fixtures = true
+  config.fixture_path = "#{::Rails.root}/spec/support/fixtures"
   config.infer_spec_type_from_file_location!
+  config.use_transactional_fixtures = true
 
-  config.include Rails.application.routes.url_helpers
+  config.include Devise::TestHelpers, type: :controller
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
-  config.include Devise::TestHelpers, type: :controller
   config.include FactoryGirl::Syntax::Methods
   config.include Helpers
   config.include JsonSpec::Helpers
+  config.include Rails.application.routes.url_helpers
   config.include RailsApiFormat::Matchers
 
   config.before :suite do

@@ -8,5 +8,7 @@ Rails.application.routes.draw do
       post "users/sign_in", to: "sessions#create"
       post "users", to: "registrations#create"
     end
+
+    resources :images, only: %i(create index)
   end
 end

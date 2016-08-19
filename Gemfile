@@ -10,11 +10,14 @@ gem "rails_api_format", path: "lib/rails_api_format"
 
 # all other gems
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
+gem "concord"
 gem "decent_exposure"
 gem "devise"
 gem "dotenv-rails"
+gem "imgurapi", github: "tam-vo/imgur"
 gem "interactor"
 gem "kaminari"
+gem "procto"
 gem "rack-cors", require: "rack/cors"
 gem "responders"
 gem "seedbank"
@@ -34,6 +37,7 @@ group :development, :test do
   gem "bundler-audit"
   gem "byebug"
   gem "mail_safe"
+  gem "pry-rails"
   gem "rspec-rails"
   gem "rubocop"
 end

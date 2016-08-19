@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::ImplicitRender
+  include Authentication
 
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
