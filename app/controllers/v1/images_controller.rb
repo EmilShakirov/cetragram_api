@@ -6,7 +6,7 @@ module V1
     expose(:images) { Image.all }
 
     def create
-      result = Images::Create.call(file: image_params[:file], user: current_user)
+      result = Images::Create.call(params: image_params, user: current_user)
 
       self.image = result.image
 
@@ -20,7 +20,7 @@ module V1
     private
 
     def image_params
-      params.require(:image).permit(:file)
+      params.require(:image).permit(:caption, :file)
     end
   end
 end
