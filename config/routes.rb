@@ -9,6 +9,6 @@ Rails.application.routes.draw do
       post "users", to: "registrations#create"
     end
 
-    resources :images, only: %i(create index)
+    resources :images, only: %i(create index show)
   end
 end

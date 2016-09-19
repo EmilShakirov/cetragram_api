@@ -1,6 +1,6 @@
 module V1
   class ImagesController < ApplicationController
-    authenticate_user only: %i(create)
+    authenticate_user only: %i(create show)
 
     expose(:image)
     expose(:images) { Image.all }
@@ -15,6 +15,10 @@ module V1
 
     def index
       respond_with images
+    end
+
+    def show
+      respond_with image
     end
 
     private
