@@ -1,12 +1,15 @@
 module Images
   class Create
+    DEFAULT_SIZE = "300x300".freeze
+
     include Interactor
 
     delegate :params, :image, :imgur_image, :user, to: :context
     delegate :link, to: :imgur_image, allow_nil: true
-    delegate :original_filename, to: :file
+    delegate :original_filename, :path, to: :file
 
     def call
+      resize!
       upload
       context.fail! unless create
     end
@@ -30,6 +33,10 @@ module Images
         link: link,
         name: original_filename
       }
+    end
+
+    def resize!
+      MiniMagick::Image.new(path).tap { |image| image.resize DEFAULT_SIZE }
     end
 
     def upload
