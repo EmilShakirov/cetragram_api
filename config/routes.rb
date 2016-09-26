@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     end
 
     resources :images, only: %i(create index show)
+    resources :likes, only: %i(create destroy)
   end
 end

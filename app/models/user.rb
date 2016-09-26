@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
     :recoverable, :trackable, :validatable
 
   has_many :images
+  has_many :likes
 end

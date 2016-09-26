@@ -14,7 +14,7 @@ module V1
     end
 
     def index
-      respond_with images
+      respond_with images.includes(:likes)
     end
 
     def show

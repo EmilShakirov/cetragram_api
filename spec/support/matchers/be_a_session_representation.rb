@@ -4,6 +4,7 @@ RSpec::Matchers.define :be_a_session_representation do
       id
       authentication_token
       email
+      likes
     )
 
     expect(json).to be

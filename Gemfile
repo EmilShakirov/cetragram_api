@@ -11,7 +11,7 @@ gem "rails_api_format", path: "lib/rails_api_format"
 # all other gems
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
 gem "concord"
-gem "decent_exposure"
+gem "decent_exposure", "3.0.0"
 gem "devise"
 gem "dotenv-rails"
 gem "imgurapi", github: "tam-vo/imgur"

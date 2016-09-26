@@ -11,9 +11,8 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.use_transactional_fixtures = true
 
+  config.include RSpec::Rails::RequestExampleGroup, type: :request, file_path: %r{spec\/controllers}
   config.include Devise::TestHelpers, type: :controller
-  config.include EmailSpec::Helpers
-  config.include EmailSpec::Matchers
   config.include FactoryGirl::Syntax::Methods
   config.include Helpers
   config.include JsonSpec::Helpers
@@ -35,5 +34,14 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+  end
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :active_record
+    with.library :active_model
+    with.library :action_controller
   end
 end
