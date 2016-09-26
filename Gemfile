@@ -10,10 +10,10 @@ gem "rails_api_format", path: "lib/rails_api_format"
 
 # all other gems
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
-gem "concord"
 gem "decent_exposure", "3.0.0"
 gem "devise"
 gem "dotenv-rails"
+gem "dry-container"
 gem "imgurapi", github: "tam-vo/imgur"
 gem "interactor"
 gem "kaminari"
@@ -27,7 +27,6 @@ gem "thin"
 group :development do
   gem "bullet"
   gem "foreman"
-  gem "letter_opener"
   gem "spring-commands-rspec"
   gem "spring"
 end
@@ -36,7 +35,6 @@ group :development, :test do
   gem "brakeman"
   gem "bundler-audit"
   gem "byebug"
-  gem "mail_safe"
   gem "pry-rails"
   gem "rspec-rails"
   gem "rubocop"
@@ -44,7 +42,6 @@ end
 
 group :test do
   gem "database_cleaner"
-  gem "email_spec"
   gem "json_spec"
   gem "shoulda-matchers", require: false
   gem "simplecov", require: false
@@ -52,7 +49,6 @@ group :test do
 end
 
 group :development, :test, :staging do
-  gem "apitome"
   gem "factory_girl_rails"
   gem "faker"
   gem "rspec_api_documentation"

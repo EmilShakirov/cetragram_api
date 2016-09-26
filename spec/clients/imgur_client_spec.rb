@@ -1,11 +1,8 @@
 require "rails_helper"
 
-describe ExternalApi::ImgurClient do
-  include ActionDispatch::TestProcess
-
-  let(:file) { fixture_file_upload("image.jpg", "image/jpg") }
-
+describe ImgurClient do
   describe "#call" do
+    let(:file) { uploaded_file }
     let(:session) { double(:session) }
     let(:image) { double(:image) }
 

@@ -3,7 +3,7 @@ module Images
     include Interactor
 
     delegate :params, :image, :imgur_image, :user, to: :context
-    delegate :link, :name, to: :imgur_image, allow_nil: true
+    delegate :link, to: :imgur_image, allow_nil: true
     delegate :original_filename, to: :file
 
     def call
@@ -33,7 +33,7 @@ module Images
     end
 
     def upload
-      context.imgur_image = ExternalApi::ImgurClient.call(file)
+      context.imgur_image = ImgurClient.call(file)
     end
   end
 end
