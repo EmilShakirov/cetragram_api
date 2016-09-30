@@ -14,7 +14,7 @@ module V1
     end
 
     def index
-      respond_with images.includes(:likes)
+      respond_with images.includes(:likes).order(created_at: :desc)
     end
 
     def show
