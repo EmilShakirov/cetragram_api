@@ -1,5 +1,6 @@
 Project name
 -
+[![Build Status](https://semaphoreci.com/api/v1/emil_shakirov/cetragram_api/branches/master/badge.svg)](https://semaphoreci.com/emil_shakirov/cetragram_api)
 [![Code Climate](https://codeclimate.com/github/EmilShakirov/cetragram_api/badges/gpa.svg)](https://codeclimate.com/github/EmilShakirov/cetragram_api)
 
 Project description.
