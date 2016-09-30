@@ -11,7 +11,9 @@ module Images
     def call
       resize!
       upload
-      context.fail! unless create
+      create
+
+      context.fail! if image.invalid?
     end
 
     private
