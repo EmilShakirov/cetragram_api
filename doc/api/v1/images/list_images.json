@@ -1,0 +1,34 @@
+{
+  "resource": "Images",
+  "http_method": "GET",
+  "route": "/v1/images",
+  "description": "List images",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/images",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"images\":[{\"id\":2,\"caption\":\"Quas dolores commodi similique veniam consequuntur.\",\"link\":\"/uploads/cache/253043e8d95fa92a14748479aaff3741.jpg\",\"likes\":[]}]}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/images\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user3@example.com\" \\\n\t-H \"X-User-Token: yicx5CgKS7xJySd-t8eQ\""
+    }
+  ]
+}

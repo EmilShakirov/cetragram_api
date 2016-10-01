@@ -9,6 +9,10 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 WebMock.disable_net_connect!(allow_localhost: true)
 
+FactoryGirl::SyntaxRunner.class_eval do
+  include ActionDispatch::TestProcess
+end
+
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/support/fixtures"
   config.infer_spec_type_from_file_location!

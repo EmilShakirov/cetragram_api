@@ -7,7 +7,6 @@ describe V1::ImagesController, type: :request do
     end
 
     before do
-      stub_imgur_upload
       post v1_images_path, image_params, auth_headers
     end
 
@@ -27,7 +26,7 @@ describe V1::ImagesController, type: :request do
   end
 
   describe "#GET show" do
-    let(:image) { create :image }
+    let(:image) { create :image, file: fixture_file_upload("image.jpg", "image/jpg") }
 
     before do
       get v1_image_path(image), {}, auth_headers
