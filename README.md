@@ -8,10 +8,6 @@ Project description.
 Dependencies
 -
 
-Information about external dependencies (redis, mongo, postgres, etc) and how you can obtain them (via homebrew, apt-get or from ftp).
-
-Information about ruby and rails versions.
-
 - PostgreSQL 9.3.1
   - `brew install postgres`
 - Ruby 2.1.0
@@ -40,6 +36,7 @@ Initializers
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
+* `shrine.rb` - Shrine config
 
 Scripts
 -
@@ -51,30 +48,18 @@ Scripts
 Documentation & Examples
 -
 
-Where is documentation and examples (e.g. `./docs`)?
-
-Continuous Integration
--
-
-CI service info and status (if available).
-Add a link to a project page on [Semaphore](http://semaphoreapp.com).
+Api documentation is available at `/docs` url.
 
 Staging
 -
 
-Location and other info about staging servers.
-
-Production
--
-
-Location and other info about production servers.
+http://cetragram.herokuapp.com/
 
 Third-party services
 -
-
-Code Climate, etc
+You have to setup `UPLOADCARE_PUBLIC_KEY` and `UPLOADCARE_SECRET_KEY` on staging or production to use https://uploadcare.com/ for file uploading.
 
 Workflow
 -
 
-Information about base branch, branch naming, commit messages, specs and pull requests. Check out our [guides](https://github.com/fs/guides/tree/master/development/maintain-existing-project/workflow).
+Check out our [guides](https://github.com/fs/guides/tree/master/development/maintain-existing-project/workflow).
