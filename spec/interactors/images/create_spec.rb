@@ -11,18 +11,20 @@ describe Images::Create do
   let(:image) { interactor.image }
 
   describe "#call" do
-    before { stub_imgur_upload(imgur_image) }
-
     context "successful upload" do
       let(:imgur_image) { build :imgur_image }
 
       it { is_expected.to be_success }
-      it { expect(image.name).to eq("image.jpg") }
-      it { expect(image.link).to eq(imgur_image.link) }
+      it { expect(image.file_url).to match("/uploads/cache/") }
+      it { expect(image.caption).to eq("Caption") }
     end
 
     context "failure upload" do
-      let(:imgur_image) { build :imgur_image, link: nil }
+      let(:image_params) do
+        {
+          file: nil
+        }
+      end
 
       it { is_expected.to be_failure }
     end

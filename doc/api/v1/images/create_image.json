@@ -1,0 +1,45 @@
+{
+  "resource": "Images",
+  "http_method": "POST",
+  "route": "/v1/images",
+  "description": "Create image",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "image",
+      "name": "file",
+      "description": "File"
+    },
+    {
+      "required": false,
+      "scope": "image",
+      "name": "caption",
+      "description": "Caption"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/images",
+      "request_body": "------------XnJLe9ZIbbGUYtzPQJ16u1\r\nContent-Disposition: form-data; name=\"image[file]\"; filename=\"image.jpg\"\r\nContent-Type: image/jpg\r\nContent-Length: 32553\r\n\r\n[uploaded data]\r\n------------XnJLe9ZIbbGUYtzPQJ16u1--\r",
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "multipart/form-data; boundary=----------XnJLe9ZIbbGUYtzPQJ16u1",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"image\":{\"id\":1,\"caption\":null,\"link\":\"/uploads/cache/ce9c04a546658a44f18335794727b748.jpg\",\"likes\":[]}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/images\" -d '------------XnJLe9ZIbbGUYtzPQJ16u1\r\nContent-Disposition: form-data; name=\"image[file]\"; filename=\"image.jpg\"\r\nContent-Type: image/jpg\r\nContent-Length: 32553\r\n\r\n[uploaded data]\r\n------------XnJLe9ZIbbGUYtzPQJ16u1--\r' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user1@example.com\" \\\n\t-H \"X-User-Token: _MrPdwtoyiDJkSAsshBx\""
+    }
+  ]
+}

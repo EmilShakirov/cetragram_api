@@ -3,7 +3,13 @@ module V1
     authenticate_user only: %i(create show)
 
     expose(:image)
-    expose(:images) { Image.all }
+    expose(:images) do
+      Image
+        .page(params[:page])
+        .per(24)
+        .includes(:likes)
+        .order(created_at: :desc)
+    end
 
     def create
       result = Images::Create.call(params: image_params, user: current_user)
@@ -14,7 +20,7 @@ module V1
     end
 
     def index
-      respond_with images.includes(:likes).order(created_at: :desc)
+      respond_with images, serializer: PaginatedArraySerializer
     end
 
     def show

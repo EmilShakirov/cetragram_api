@@ -11,16 +11,51 @@
       ]
     },
     {
+      "name": "Images",
+      "examples": [
+        {
+          "description": "Create image",
+          "link": "images/create_image.json",
+          "groups": "all"
+        },
+        {
+          "description": "List images",
+          "link": "images/list_images.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Sessions",
       "examples": [
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
+          "groups": "all"
+        },
         {
           "description": "Sign in with valid password",
           "link": "sessions/sign_in_with_valid_password.json",
           "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Likes",
+      "examples": [
+        {
+          "description": "Unlike an image with non-existed id",
+          "link": "likes/unlike_an_image_with_non-existed_id.json",
+          "groups": "all"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Unlike an image",
+          "link": "likes/unlike_an_image.json",
+          "groups": "all"
+        },
+        {
+          "description": "Like an image",
+          "link": "likes/like_an_image.json",
           "groups": "all"
         }
       ]

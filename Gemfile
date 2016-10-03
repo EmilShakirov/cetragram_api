@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-# the most important stuff
 gem "rails", "~> 4.2.7.1"
 gem "pg"
 gem "rails-api"
@@ -13,15 +12,13 @@ gem "active_model_serializers", git: "https://github.com/rails-api/active_model_
 gem "decent_exposure", "3.0.0"
 gem "devise"
 gem "dotenv-rails"
-gem "dry-container"
-gem "imgurapi", git: "https://github.com/tam-vo/imgur.git"
 gem "interactor"
 gem "kaminari"
-gem "mini_magick"
-gem "procto"
 gem "rack-cors", require: "rack/cors"
 gem "responders"
 gem "seedbank"
+gem "shrine-uploadcare"
+gem "shrine"
 gem "simple_token_authentication"
 gem "thin"
 
@@ -50,6 +47,7 @@ group :test do
 end
 
 group :development, :test, :staging do
+  gem "apitome"
   gem "factory_girl_rails"
   gem "faker"
   gem "rspec_api_documentation"
