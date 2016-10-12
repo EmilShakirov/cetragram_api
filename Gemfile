@@ -9,11 +9,14 @@ gem "rails_api_format", path: "lib/rails_api_format"
 
 # all other gems
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
+gem "concord"
 gem "decent_exposure", "3.0.0"
 gem "devise"
 gem "dotenv-rails"
+gem "draper"
 gem "interactor"
 gem "kaminari"
+gem "procto"
 gem "rack-cors", require: "rack/cors"
 gem "responders"
 gem "seedbank"
@@ -23,6 +26,8 @@ gem "simple_token_authentication"
 gem "thin"
 
 group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
   gem "bullet"
   gem "foreman"
   gem "spring-commands-rspec"

@@ -5,9 +5,9 @@ module V1
     expose(:image)
     expose(:images) do
       Image
+        .includes(:likes)
         .page(params[:page])
         .per(24)
-        .includes(:likes)
         .order(created_at: :desc)
     end
 
