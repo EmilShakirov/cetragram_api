@@ -1,7 +1,7 @@
 module AuthProviders
   class TwitterDecorator < BaseAuthDecorator
     def verified?
-      credentials.token
+      id
     end
 
     def nickname

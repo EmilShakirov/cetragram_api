@@ -1,19 +1,13 @@
 module V1
   class OauthUsersController < ApplicationController
-    expose(:oauth) { OpenStruct.new(oauth_user_params[:oauth_data]) }
-    expose(:user) { UserServices::FromOauthFetcher.call(oauth_hash_decorated) }
-
     def create
-      respond_with user, serializer: SessionSerializer
+      result = VerifyOauthAndFindUser.call(oauth_data: oauth_user_params[:oauth_data])
+      status = result.success? ? :ok : :unprocessible_entity
+
+      respond_with result.user, serializer: SessionSerializer, status: status
     end
 
     private
-
-    def oauth_hash_decorated
-      "AuthProviders::#{oauth.provider.to_s.classify}Decorator"
-        .constantize
-        .new(oauth)
-    end
 
     def oauth_user_params
       params.fetch(:oauth_user, {}).tap do |whitelisted|
