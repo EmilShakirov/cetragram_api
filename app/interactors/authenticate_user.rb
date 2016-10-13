@@ -3,7 +3,7 @@ class AuthenticateUser
 
   OPTIONS = { store: false, scope: :user }.freeze
 
-  delegate :warden, to: :context
+  delegate :warden, to: :context, allow_nil: true
 
   def call
     context.user = authenticated_user!

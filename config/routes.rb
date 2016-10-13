@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
     resources :images, only: %i(create index show)
     resources :likes, only: %i(create destroy)
+    resources :oauth_users, only: %i(create)
   end
 end
