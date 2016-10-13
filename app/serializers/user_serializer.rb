@@ -1,5 +1,5 @@
 class UserSerializer < ApplicationSerializer
-  attributes :id, :email
+  attributes :id, :email, :name
 
   has_many :likes
 end
