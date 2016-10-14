@@ -1,7 +1,7 @@
 module AuthProviders
   class FacebookDecorator < BaseAuthDecorator
     def verified?
-      info.verified || extra.raw_info.verified
+      id
     end
 
     def nickname

@@ -1,11 +1,15 @@
 module AuthProviders
   class TwitterDecorator < BaseAuthDecorator
-    def verified?
-      id
+    def email
+      "#{nickname}@twitter_oauth.com"
     end
 
     def nickname
       object.alias
+    end
+
+    def verified?
+      id
     end
   end
 end
