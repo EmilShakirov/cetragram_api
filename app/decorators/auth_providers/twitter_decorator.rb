@@ -7,9 +7,5 @@ module AuthProviders
     def nickname
       object.alias
     end
-
-    def verified?
-      id
-    end
   end
 end
