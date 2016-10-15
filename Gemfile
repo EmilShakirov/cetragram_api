@@ -23,7 +23,7 @@ gem "seedbank"
 gem "shrine-uploadcare"
 gem "shrine"
 gem "simple_token_authentication"
-gem "thin"
+gem "puma"
 
 group :development do
   gem "better_errors"
