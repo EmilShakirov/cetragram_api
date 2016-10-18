@@ -2,7 +2,7 @@ module V1
   class OauthUsersController < ApplicationController
     def create
       result = VerifyOauthAndFindUser.call(oauth_data: oauth_user_params[:oauth_data])
-      status = result.success? ? :ok : :unprocessible_entity
+      status = result.success? ? :ok : :unprocessable_entity
 
       respond_with result.user, serializer: SessionSerializer, status: status
     end
