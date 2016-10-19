@@ -1,5 +1,5 @@
 class VerifyOauthAndFindUser
   include Interactor::Organizer
 
-  organize VerifyOauth, FindUserByOauth, FindUserByEmail, CreateUser
+  organize VerifyOauth, FindOrCreateUser
 end

@@ -17,10 +17,5 @@ resource "Sessions" do
     example_request "Sign in with valid password", password: "123456" do
       expect(response["user"]).to be_a_session_representation
     end
-
-    example_request "Sign in with invalid password", password: "" do
-      expect(response_status).to eq 401
-      expect(response).to be_an_error_representation(:unauthorized, "Invalid email or password.")
-    end
   end
 end
