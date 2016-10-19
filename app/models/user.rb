@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     :trackable,
     :validatable
 
-  has_many :identities
+  has_many :identities, dependent: :destroy
   has_many :images
-  has_many :likes
+  has_many :likes, dependent: :destroy
 end

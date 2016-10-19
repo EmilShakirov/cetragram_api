@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Images::Create do
+describe CreateImage do
   let(:user) { create :user }
   let(:image_params) do
     {

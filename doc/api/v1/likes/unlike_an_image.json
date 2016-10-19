@@ -23,7 +23,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/likes/1",
+      "request_path": "/v1/likes/2",
       "request_body": "like[image_id]=4",
       "request_headers": {
         "Accept": "application/json"
@@ -33,12 +33,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"like\":{\"id\":1,\"image_id\":4,\"user_id\":7}}",
+      "response_body": "{\"like\":{\"id\":2,\"image_id\":4,\"user_id\":8}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/likes/1\" -d 'like[image_id]=4' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user7@example.com\" \\\n\t-H \"X-User-Token: Rw5imEHH4sAAVaDK4ouj\""
+      "curl": "curl \"http://localhost:5000/v1/likes/2\" -d 'like[image_id]=4' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user7@example.com\" \\\n\t-H \"X-User-Token: CD_A8AboPs7HAxksx17z\""
     }
   ]
 }

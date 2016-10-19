@@ -1,16 +1,6 @@
 {
   "resources": [
     {
-      "name": "Errors",
-      "examples": [
-        {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Images",
       "examples": [
         {
@@ -26,16 +16,21 @@
       ]
     },
     {
-      "name": "Sessions",
+      "name": "Errors",
       "examples": [
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Ouath Users",
+      "examples": [
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Create user from oauth data",
+          "link": "ouath_users/create_user_from_oauth_data.json",
           "groups": "all"
         }
       ]
@@ -44,8 +39,8 @@
       "name": "Likes",
       "examples": [
         {
-          "description": "Unlike an image with non-existed id",
-          "link": "likes/unlike_an_image_with_non-existed_id.json",
+          "description": "Like an image",
+          "link": "likes/like_an_image.json",
           "groups": "all"
         },
         {
@@ -54,8 +49,23 @@
           "groups": "all"
         },
         {
-          "description": "Like an image",
-          "link": "likes/like_an_image.json",
+          "description": "Unlike an image with non-existed id",
+          "link": "likes/unlike_an_image_with_non-existed_id.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
         }
       ]

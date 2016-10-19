@@ -1,0 +1,39 @@
+{
+  "resource": "Ouath Users",
+  "http_method": "POST",
+  "route": "/v1/oauth_users",
+  "description": "Create user from oauth data",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "oauth_user",
+      "name": "oauth_data",
+      "description": "Raw oauth hash"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/oauth_users",
+      "request_body": "oauth_user[oauth_data][provider]=facebook&oauth_user[oauth_data][id]=123123&oauth_user[oauth_data][email]=john_smith%40example.com&oauth_user[oauth_data][name]=Boris+Eltsin&oauth_user[oauth_data][verified]=true&oauth_user[oauth_data][info]=%23%3COpenStruct+verified%3Dtrue%3E",
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"user\":{\"id\":5,\"email\":\"john_smith@example.com\",\"name\":null,\"authentication_token\":\"Gz7X1yuzLPoayPEVoPHf\",\"likes\":[]}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/oauth_users\" -d 'oauth_user[oauth_data][provider]=facebook&oauth_user[oauth_data][id]=123123&oauth_user[oauth_data][email]=john_smith%40example.com&oauth_user[oauth_data][name]=Boris+Eltsin&oauth_user[oauth_data][verified]=true&oauth_user[oauth_data][info]=%23%3COpenStruct+verified%3Dtrue%3E' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user4@example.com\" \\\n\t-H \"X-User-Token: Hs3GReZxLCP6VbUv7isx\""
+    }
+  ]
+}

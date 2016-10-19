@@ -19,7 +19,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/likes",
-      "request_body": "like[image_id]=5",
+      "request_body": "like[image_id]=3",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -28,12 +28,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"like\":{\"id\":2,\"image_id\":5,\"user_id\":9}}",
+      "response_body": "{\"like\":{\"id\":1,\"image_id\":3,\"user_id\":7}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/likes\" -d 'like[image_id]=5' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user9@example.com\" \\\n\t-H \"X-User-Token: hyR5LZcUsxcVuytdtALN\""
+      "curl": "curl \"http://localhost:5000/v1/likes\" -d 'like[image_id]=3' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user6@example.com\" \\\n\t-H \"X-User-Token: RDeQhbdDxEcobx4hYziw\""
     }
   ]
 }

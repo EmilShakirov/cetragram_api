@@ -34,12 +34,12 @@
       "request_content_type": "multipart/form-data; boundary=----------XnJLe9ZIbbGUYtzPQJ16u1",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"image\":{\"id\":1,\"caption\":null,\"link\":\"/uploads/cache/ce9c04a546658a44f18335794727b748.jpg\",\"likes\":[]}}",
+      "response_body": "{\"image\":{\"id\":1,\"caption\":null,\"link\":\"/uploads/cache/96cb41a0bab76fc4689819516be3ba6d.jpg\",\"likes\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/images\" -d '------------XnJLe9ZIbbGUYtzPQJ16u1\r\nContent-Disposition: form-data; name=\"image[file]\"; filename=\"image.jpg\"\r\nContent-Type: image/jpg\r\nContent-Length: 32553\r\n\r\n[uploaded data]\r\n------------XnJLe9ZIbbGUYtzPQJ16u1--\r' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user1@example.com\" \\\n\t-H \"X-User-Token: _MrPdwtoyiDJkSAsshBx\""
+      "curl": "curl \"http://localhost:5000/v1/images\" -d '------------XnJLe9ZIbbGUYtzPQJ16u1\r\nContent-Disposition: form-data; name=\"image[file]\"; filename=\"image.jpg\"\r\nContent-Type: image/jpg\r\nContent-Length: 32553\r\n\r\n[uploaded data]\r\n------------XnJLe9ZIbbGUYtzPQJ16u1--\r' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user1@example.com\" \\\n\t-H \"X-User-Token: HW3RD2xZthDseNbK67Vn\""
     }
   ]
 }

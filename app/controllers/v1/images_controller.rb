@@ -12,7 +12,7 @@ module V1
     end
 
     def create
-      result = Images::Create.call(params: image_params, user: current_user)
+      result = CreateImage.call(params: image_params, user: current_user)
 
       self.image = result.image
 
