@@ -24,7 +24,7 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/likes/99",
-      "request_body": "like[image_id]=3",
+      "request_body": "like[image_id]=5",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -33,12 +33,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 404,
       "response_status_text": "Not Found",
-      "response_body": "{\"error\":{\"id\":\"dd9543a2-52b6-46f8-93c0-b1ef6eeeaf79\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
+      "response_body": "{\"error\":{\"id\":\"39f19d01-846b-46e1-a44f-00040468222d\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/likes/99\" -d 'like[image_id]=3' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user6@example.com\" \\\n\t-H \"X-User-Token: BSbc7bet2UyBAHaiyxjb\""
+      "curl": "curl \"http://localhost:5000/v1/likes/99\" -d 'like[image_id]=5' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user8@example.com\" \\\n\t-H \"X-User-Token: S7oDzsrfCkyRYxXUfV-z\""
     }
   ]
 }

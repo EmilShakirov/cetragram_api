@@ -6,5 +6,9 @@ FactoryGirl.define do
     name "Boris Eltsin"
     verified true
     info { OpenStruct.new(verified: true) }
+
+    trait :not_verified do
+      id nil
+    end
   end
 end
