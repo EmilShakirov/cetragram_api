@@ -6,7 +6,7 @@ class FindUserByEmail
   delegate :email, :provider, :id, to: :decorated_oauth
 
   def call
-    context.user ||= User.find_by_email(email)
+    context.user ||= User.find_by(email: email)
 
     context.fail! if identity&.invalid?
   end
